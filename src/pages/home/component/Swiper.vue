@@ -14,9 +14,12 @@ export default {
   name: 'HomeSwiper',
   data () {
     return {
+      timer: null,
       swiperOption: {
         pagination: '.swiper-pagination',
-        loop: true
+        loop: true,
+        autoplay: 3000,
+        speed: 1000
       },
       swiperList: [{
         id: '1',
