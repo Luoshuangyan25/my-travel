@@ -1,8 +1,8 @@
 <template>
     <div class="recommend">
-        <div class="title"><img src="~icons/火热推荐.png" class="recommend-icon">热门榜单</div>
+        <div class="title"><img src="~icons/地点.png" class="recommend-icon">当地必去胜地</div>
         <ul>
-            <li class="item" v-for="(item, index) of RecommendList" :key="index">
+            <li class="item" v-for="(item, index) of WeekendList" :key="index">
                 <img class="item-img" :src="item.imgUrl">
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
@@ -16,35 +16,8 @@
 <script>
 export default{
   name: 'Weekend',
-  data () {
-    return {
-      RecommendList: [{
-        id: 1,
-        imgUrl: 'https://imgs.qunarzz.com/sight/source/1505/91/04b59ae6faf17a.jpg_r_640x214_ce69a65a.jpg',
-        title: '北京',
-        decs: '北京'
-      }, {
-        id: 2,
-        imgUrl: 'https://imgs.qunarzz.com/sight/source/1505/91/04b59ae6faf17a.jpg_r_640x214_ce69a65a.jpg',
-        title: '北京',
-        decs: '北京'
-      }, {
-        id: 3,
-        imgUrl: 'https://imgs.qunarzz.com/sight/source/1505/91/04b59ae6faf17a.jpg_r_640x214_ce69a65a.jpg',
-        title: '北京',
-        decs: '北京'
-      }, {
-        id: 4,
-        imgUrl: 'https://imgs.qunarzz.com/sight/source/1505/91/04b59ae6faf17a.jpg_r_640x214_ce69a65a.jpg',
-        title: '北京',
-        decs: '北京'
-      }, {
-        id: 5,
-        imgUrl: 'https://imgs.qunarzz.com/sight/source/1505/91/04b59ae6faf17a.jpg_r_640x214_ce69a65a.jpg',
-        title: '北京',
-        decs: '北京'
-      }]
-    }
+  props: {
+    WeekendList: Array
   }
 }
 </script>
@@ -52,7 +25,6 @@ export default{
 <style lang="stylus" scoped>
 @import '~styles/mixins.styl'
   .title
-    margin-top: .2rem
     line-height: .8rem
     background-color: #f5f5f5
   .recommend-icon

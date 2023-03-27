@@ -38,7 +38,7 @@ module.exports = {
       '@': resolve('src'),
       'styles': resolve('src/assets/styles'),
       'img': resolve('src/assets/img'),
-      'icons': resolve('src/assets/icons'),
+      'icons': resolve('src/assets/icons')
     }
   },
   module: {
@@ -77,7 +77,7 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
     ]
   },
   node: {
