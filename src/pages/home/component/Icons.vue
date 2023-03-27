@@ -97,10 +97,11 @@ export default{
 <style lang="stylus" scoped>
 @import '../../../assets/styles/varibles.styl'
 .icons
+  margin-top: .1rem
   overflow: hidden
   width: 100%
   height: 0
-  padding-bottom: 50%
+  padding-bottom: 42%
   .icon
     position relative
     overflow: hidden
