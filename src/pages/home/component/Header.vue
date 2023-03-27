@@ -4,7 +4,9 @@
           <div class="iconfont back-icon">&#xe61e;</div>
         </div>
         <div class="iconfont header-input"><span class="search">&#xe632;</span>输入城市/景点/游玩主题</div>
-        <div class="iconfont header-right arrow-icon">{{this.city}}&#xe621;</div>
+        <router-link to="/City">
+          <div class="iconfont header-right arrow-icon">{{this.city}}&#xe621;</div>
+        </router-link>
     </div>
 </template>
 
@@ -22,7 +24,7 @@ export default {
 @import '../../../assets/styles/varibles.styl';
   .header
     display: flex
-    line-height: .86rem
+    line-height: $header
     background-color: $bgColor
     color: #fff
     .header-left
@@ -49,6 +51,7 @@ export default {
       width: 1.24rem
       float: right
       text-align: center
+      color: white
       .arrow-icon
         font-size: .24rem
         margin-left: -.04rem
