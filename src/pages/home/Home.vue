@@ -39,7 +39,6 @@ export default {
       axios.get('/api/index.json').then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
-      console.log(res)
       let result = res.data
       if (result.ret === true && result.data) {
         this.city = result.data.city
