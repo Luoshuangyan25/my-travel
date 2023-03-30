@@ -46,7 +46,7 @@ export default {
       this.touchStatus = true
     },
     handleTouchMove (event) {
-      if (this.touchStatus) {  
+      if (this.touchStatus) {
         if (this.timer) {
           clearTimeout(this.timer)
         }
