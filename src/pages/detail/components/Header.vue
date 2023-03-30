@@ -49,6 +49,9 @@ export default {
   },
   activated () { // 页面渲染就执行的钩子函数
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () { // 页面即将被隐藏、换成新页面时，就执行的钩子函数
+    window.removeEventListener('scroll', this.handleScroll) // 一定要注意移除掉
   }
 }
 </script>
