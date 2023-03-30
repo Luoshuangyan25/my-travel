@@ -2,7 +2,10 @@
     <div class="recommend">
         <div class="title"><img src="~icons/火热推荐.png" class="recommend-icon">热门榜单</div>
         <ul>
-            <li class="item" v-for="(item, index) of RecommendList" :key="index">
+            <router-link class="item"
+            v-for="(item, index) of RecommendList"
+            :key="index"
+            :to="'/detail/' + item.id">
                 <div>
                   <img class="item-img" :src="item.imgUrl">
                 </div>
@@ -11,7 +14,7 @@
                     <p class="item-desc">{{item.decs}}</p>
                     <button class="item-button">查看详细</button>
                 </div>
-            </li>
+            </router-link>
         </ul>
     </div>
 </template>
@@ -56,6 +59,7 @@ export default{
       line-height: .60rem
       font-size: .32rem
       ellipsis()
+      color: #1797b1
     .item-desc
       line-height: .4rem
       margin-bottom: .15rem

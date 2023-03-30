@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3970563 */
-  src: url('./iconfont/iconfont.woff2?t=1679660058320') format('woff2'),
-       url('./iconfont/iconfont.woff?t=1679660058320') format('woff'),
-       url('./iconfont/iconfont.ttf?t=1679660058320') format('truetype');
+  src: url('./iconfont/iconfont.woff2?t=1680165520908') format('woff2'),
+       url('./iconfont/iconfont.woff?t=1680165520908') format('woff'),
+       url('./iconfont/iconfont.ttf?t=1680165520908') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tupian:before {
+  content: "\e8d3";
 }
 
 .icon-sousuo:before {
