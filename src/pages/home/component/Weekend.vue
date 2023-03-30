@@ -34,7 +34,6 @@ export default{
     right: 0
     margin-right: .1rem
     box-sizing: border-box
-
   .item-img
     display: block
     width: 100%
