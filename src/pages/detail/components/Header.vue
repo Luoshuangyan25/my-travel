@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'DetailHeader',
+  name: 'detailHeader',
   data () {
     return {
       showAbs: true,
@@ -72,6 +72,7 @@ export default {
      font-size: .4rem
      line-height: .8rem
 .header-fixed
+  z-index: 2
   position: fixed
   top: 0
   left: 0
