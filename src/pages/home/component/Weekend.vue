@@ -2,13 +2,16 @@
     <div class="recommend">
         <div class="title"><img src="~icons/地点.png" class="recommend-icon">当地必去胜地</div>
         <ul>
-            <li class="item" v-for="(item, index) of WeekendList" :key="index">
+            <router-link class="item"
+            v-for="(item, index) of WeekendList"
+            :key="index"
+            :to="'/detail/' + item.id">
                 <img class="item-img" :src="item.imgUrl">
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
                     <p class="item-desc">{{item.decs}}</p>
                 </div>
-            </li>
+            </router-link>
         </ul>
     </div>
 </template>
