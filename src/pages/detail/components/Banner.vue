@@ -1,17 +1,17 @@
 <template>
     <div>
         <div class="banner" @click="handleBannerClick">
-            <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1905/29/296e5659470d69bea3.img.jpg_350x240_704ed237.jpg">
+            <img class="banner-img" :src="bannerImg">
             <div class="banner-info">
-                <div class="banner-title">长沙世界之窗(AAAA景区)</div>
+                <div class="banner-title">{{sightName}}</div>
                 <div class="banner-number">
                     <span class="iconfont banner-icon">&#xe8d3;</span>
-                    12
+                    {{ this.gallaryImgs.length }}
                 </div>
             </div>
         </div>
       <CommonPicture
-      :imgs="imgs"
+      :imgs="gallaryImgs"
       v-show="showPicture"
       @close="handleBannerClose"></CommonPicture>
     </div>
@@ -23,9 +23,13 @@ export default {
   name: 'detailBanner',
   data () {
     return {
-      showPicture: false,
-      imgs: ['http://qimgs.qunarzz.com/piao_qsight_provider_piao_qsight_web/0103f120008fwmuiw20FF.jpg_350x240_3850fa2f.jpg']
+      showPicture: false
     }
+  },
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
   },
   components: {
     CommonPicture

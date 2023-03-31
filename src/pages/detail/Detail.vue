@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <detail-banner></detail-banner>
+    <div ref="detail">
+        <detail-banner :sightName="sightName" :bannerImg="bannerImg" :gallaryImgs="gallaryImgs"></detail-banner>
         <detail-header></detail-header>
         <div class="content">
           <detail-list :list="list"></detail-list>
@@ -12,6 +12,7 @@
 import detailBanner from './components/Banner.vue'
 import detailHeader from './components/Header'
 import detailList from './components/list.vue'
+import axios from 'axios'
 
 export default {
   name: 'detail',
@@ -22,26 +23,35 @@ export default {
   },
   data () {
     return {
-      list: [{
-        title: '成人票',
-        children: [{
-          title: '成人门票',
-        }, {
-          title: '成人套票',
-          children: [{
-            title: '25项游乐设施',
-          }, {
-            title: '50项游乐设施'
-          }]
-        }]
-      }, {
-        title: '学生票'
-      }, {
-        title: '儿童票'
-      }, {
-        title: '特惠票'
-      }]
+      sightName: '',
+      bannerImg: '',
+      gallaryImgs: [],
+      list: []
     }
+  },
+  methods: {
+    getDetailInfo () {
+      // 发送ajax请求带上id 写法1,2
+      // axios.get('./api/detail.json', {
+      //   params: {
+      //     id: this.$route.params.id
+      //   }
+      // })
+      axios.get('./api/detail.json?id=' + this.$route.params.id).then(this.handelGetDataSucc)
+    },
+    handelGetDataSucc (res) {
+      let result = res.data
+      if (result.ret && result.data) {
+        const data = result.data
+        this.sightName = data.sightName
+        this.bannerImg = data.bannerImg
+        this.gallaryImgs = data.gallaryImgs
+        this.list = data.categoryList
+      }
+    }
+  },
+  mounted () { // 在生命周期钩子,执行发送ajax的函数
+    this.getDetailInfo()
   }
 }
 </script>

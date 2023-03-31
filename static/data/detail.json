@@ -1,0 +1,26 @@
+{
+    "ret": true,
+    "data": {
+      "sightName": "长沙世界之窗(AAAA景区)",
+      "bannerImg": "http://img1.qunarzz.com/sight/p0/1905/29/296e5659470d69bea3.img.jpg_350x240_704ed237.jpg",
+      "gallaryImgs": ["http://img1.qunarzz.com/sight/p0/1905/29/296e5659470d69bea3.img.jpg_350x240_704ed237.jpg", "http://qimgs.qunarzz.com/piao_qsight_provider_piao_qsight_web/0101l120008fvo60zC273.jpg_r_800x800_bc2515f1.jpg", "http://qimgs.qunarzz.com/piao_qsight_provider_piao_qsight_web/0103f120008fwmuiw20FF.jpg_r_800x800_e480e335.jpg"],
+      "categoryList": [{
+          "title": "成人票",
+          "children": [{
+            "title": "成人全天套票",
+            "children": [{
+              "title": "成人全天套票 - 25项游乐设施"
+            }, {
+              "title": "成人全天套票 - 30项游乐设施"
+            }]
+          }]
+        }, {
+          "title": "学生票"
+        }, {
+          "title": "儿童票"
+        }, {
+          "title": "特惠票"
+        }]
+    }
+  }
+  
