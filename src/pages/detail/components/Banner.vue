@@ -10,15 +10,19 @@
                 </div>
             </div>
         </div>
-      <CommonPicture
-      :imgs="gallaryImgs"
-      v-show="showPicture"
-      @close="handleBannerClose"></CommonPicture>
+        <Fade>
+          <!-- CommonPicture组件插入插槽 -->
+          <CommonPicture
+          :imgs="gallaryImgs"
+          v-show="showPicture"
+          @close="handleBannerClose"></CommonPicture>
+        </Fade>
     </div>
 </template>
 
 <script>
 import CommonPicture from '../../../common/picture/Picture.vue'
+import Fade from '../../../common/fade/Fade.vue'
 export default {
   name: 'detailBanner',
   data () {
@@ -32,7 +36,8 @@ export default {
     gallaryImgs: Array
   },
   components: {
-    CommonPicture
+    CommonPicture,
+    Fade
   },
   methods: {
     handleBannerClick () {
