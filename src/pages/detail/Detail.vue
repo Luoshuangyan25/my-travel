@@ -37,7 +37,7 @@ export default {
       //     id: this.$route.params.id
       //   }
       // })
-      axios.get('./api/detail.json?id=' + this.$route.params.id).then(this.handelGetDataSucc)
+      axios.get('./static/data/detail.json?id=' + this.$route.params.id).then(this.handelGetDataSucc)
     },
     handelGetDataSucc (res) {
       let result = res.data
